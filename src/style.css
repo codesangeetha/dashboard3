@@ -1,0 +1,123 @@
+.sidebar-class {
+    font-size: 20px;
+    padding-left: 10px;
+    background-color: rgb(62, 167, 209);
+    height: 1000px;
+    width: 200px;
+    color: white;
+}
+
+.common-class {
+    margin-top: 18px;
+}
+
+.components-class {
+    display: flex;
+}
+
+.display-class {
+    display: flex;
+
+}
+
+.test-class {
+    width: 150px;
+    background-color: beige;
+}
+
+.name-class {
+    width: 150px;
+}
+
+.margin-class {
+    margin: 10px;
+}
+
+.img-class {
+    height: 200px;
+}
+
+.brand-class {
+    font-size: 15px;
+    color: rgb(89, 87, 87);
+    margin-top: 15px;
+}
+
+.price-class {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.oldprice-class {
+    color: rgb(57, 55, 55);
+    font-size: 15px;
+    text-decoration: line-through;
+    margin-top: 7px;
+}
+
+.rating-class {
+    margin-top: 5px;
+}
+
+.ratingcount-class {
+    margin-top: 5px;
+}
+
+/* 2nd page */
+
+.prodName-class {
+    font-size: 22px;
+    width: 300px;
+}
+
+.blueFont-class {
+    font-size: 14px;
+    color:rgb(28, 145, 191);
+}
+
+.rateFlex-class {
+    display: flex;
+}
+.rating2-class{
+    font-size: 15px;
+    margin-right: 20px; 
+}
+.bar-class{
+    display: flex;
+}
+.bar2-class{
+    margin-right: 10px;
+}
+.amazone-class{
+   color: white;
+}
+.choice-class{
+    margin-left: 10px;
+color: orange;
+}
+.choiceFlex-class{
+    display: flex;
+    background-color: rgb(74, 67, 67);
+    font-size: 14px;
+    width: 132px;
+    height: 20px;
+    margin-top: 5px;
+}
+.blueGram-class{
+    color:rgb(28, 145, 191);
+    font-size: 12px;
+}
+.for-class{
+    font-size: 15px;
+    margin-right: 5px;
+}
+.forDisplay-class{
+    display: flex;
+}
+.bought-class{
+    font-size: 15px;
+}
+.hr-class{
+    width: 300px;
+    
+}
