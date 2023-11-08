@@ -20,9 +20,9 @@ export default function Productpage() {
 
     return (
         <div>
-            <div>
-                {obj.imageUrl}
-            </div>
+            
+              <img src={obj.imageUrl}/>
+            
         </div>
     )
 }
