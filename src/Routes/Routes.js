@@ -5,6 +5,7 @@ import Admin from "../Components/Admin";
 import Sitemobile from "../Components/Sitemobile";
 import Testmobile from "../Components/Testmobile";
 import Productpage from "../Components/Productpage";
+import Cart from "../Components/Cart";
 
 
 export default function MainRoutes() {
@@ -15,7 +16,8 @@ export default function MainRoutes() {
             <Route path="admin" element={<Admin />} />
             <Route path="sitemobile" element={<Sitemobile />} />
             <Route path="testmobile" element={<Testmobile />} />
-            <Route path="productpage" element={<Productpage />} />
+            <Route path="productpage/:id" element={<Productpage />} />
+            <Route path="cart" element={<Cart />} />
 
             </Route>
         </Routes>

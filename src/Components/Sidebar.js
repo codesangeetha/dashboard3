@@ -16,6 +16,9 @@ export default function Sidebar(){
             <div className="common-class">
                 <Link to="/productpage">Productpage</Link>
             </div>
+            <div className="common-class">
+                <Link to="/cart">Cart</Link>
+            </div>
            
         </div>
     )

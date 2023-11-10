@@ -31,6 +31,7 @@
 
 .margin-class {
     margin: 10px;
+    margin-top: 30px;
 }
 
 .img-class {
@@ -71,53 +72,43 @@
 }
 
 .blueFont-class {
-    font-size: 14px;
-    color:rgb(28, 145, 191);
+    font-size: 18px;
+    color: rgb(89, 6, 92);
 }
 
-.rateFlex-class {
+.display2-class {
     display: flex;
 }
-.rating2-class{
-    font-size: 15px;
-    margin-right: 20px; 
+
+.margin2-class {
+    margin: 20px;
 }
-.bar-class{
-    display: flex;
+
+.img2-class {
+    height: 350px;
+    margin-left: 15px;
 }
-.bar2-class{
-    margin-right: 10px;
+
+.buy-class {
+    margin-left: 20px;
 }
-.amazone-class{
-   color: white;
+
+.cart-class {
+    margin-left: 20px;
 }
-.choice-class{
-    margin-left: 10px;
-color: orange;
+
+.button-class {
+    margin-top: 15px;
+    border-radius: 25px;
+
 }
-.choiceFlex-class{
-    display: flex;
-    background-color: rgb(74, 67, 67);
-    font-size: 14px;
-    width: 132px;
-    height: 20px;
-    margin-top: 5px;
+.tickImg-class{
+height: 15px;
 }
-.blueGram-class{
-    color:rgb(28, 145, 191);
-    font-size: 12px;
+.cartimg-class{
+    height: 50px;
+    margin-right: 20px;
 }
-.for-class{
-    font-size: 15px;
-    margin-right: 5px;
-}
-.forDisplay-class{
-    display: flex;
-}
-.bought-class{
-    font-size: 15px;
-}
-.hr-class{
-    width: 300px;
-    
-}
+
+
+
