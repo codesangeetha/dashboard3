@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { postData } from "../services/fetchfns";
 
 export default function Productpage() {
 
@@ -22,13 +23,30 @@ export default function Productpage() {
     }
 
 
-    function cartFn(){
-        navigate(`/cart`);
+    function cartFn() {
+        const url = "http://localhost:8080/api/cart/add-to-cart";
+        let basketId = localStorage.getItem('basketid');
+        if(basketId === null){
+            basketId = Math.floor(Math.random() * 999) + 101;
+            localStorage.setItem("basketid", basketId);
+        } 
+        
+        console.log('basketId', basketId);
+        const postObj = {
+            "mobileId": id,
+            "quantity": 1,
+            "basketId": basketId
+        };
+
+        postData(url, postObj)
+            .then(async data => {
+                navigate(`/cart`);
+            });
     }
 
     return (
-     
-         <div className="display-class">
+
+        <div className="display-class">
             <div>
                 <img className="img2-class" src={obj.imageUrl} />
             </div>
@@ -53,11 +71,11 @@ export default function Productpage() {
                     ({obj.ratingCount})
                 </div>
                 <div className="button-class">
-            <button className="buy-class">Buy</button>
-            <button onClick={cartFn}      className="cart-class">Add to cart</button>
-        </div>
+                    <button className="buy-class">Buy</button>
+                    <button onClick={cartFn} className="cart-class">Add to cart</button>
+                </div>
             </div>
-        
-       </div>
+
+        </div>
     )
 }

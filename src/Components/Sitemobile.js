@@ -8,7 +8,7 @@ export default function Site() {
 
     React.useEffect(() => {
         fetchData();
-        const intervalId = setInterval(fetchData, 1000);
+       // const intervalId = setInterval(fetchData, 1000);
     }, [])
 
     function fetchData() {
@@ -76,6 +76,9 @@ export default function Site() {
     return (
         <div className="display-class">
             {getResult()}
+
+
+            
         </div>
     )
 }

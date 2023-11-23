@@ -17,6 +17,7 @@
 
 .display-class {
     display: flex;
+    width: 520px;
 
 }
 
@@ -102,13 +103,29 @@
     border-radius: 25px;
 
 }
-.tickImg-class{
-height: 15px;
+
+.tickImg-class {
+    height: 15px;
 }
-.cartimg-class{
+
+.cartimg-class {
     height: 50px;
     margin-right: 20px;
+    margin-left: 10px;
 }
 
+.amount-class {
+    width: 90px;
+    margin-left: 10px;
+}
 
+/* checkoutPage */
 
+.marginTop-class {
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+.name-class {
+    width: 200px;
+}

@@ -14,11 +14,9 @@ export default function Sidebar(){
                 <Link to="/testmobile">Testmobile</Link>
             </div>
             <div className="common-class">
-                <Link to="/productpage">Productpage</Link>
+                <Link to="/localstorage1">Localstorage1</Link>
             </div>
-            <div className="common-class">
-                <Link to="/cart">Cart</Link>
-            </div>
+           
            
         </div>
     )
