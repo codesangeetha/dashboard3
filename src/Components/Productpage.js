@@ -9,12 +9,16 @@ export default function Productpage() {
     const { id } = useParams();
     let navigate = useNavigate();
 
+
+    const [qtydata, setQty] = React.useState("1");
+
     React.useEffect(() => {
         fetchData();
+
     }, [])
 
     function fetchData() {
-        fetch(`http://localhost:8080/api/mobiles/${id}`)
+        fetch(`http://localhost:8080/api/products/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log('data', data);
@@ -22,19 +26,19 @@ export default function Productpage() {
             });
     }
 
-
     function cartFn() {
+
         const url = "http://localhost:8080/api/cart/add-to-cart";
-        let basketId = localStorage.getItem('basketid');
-        if(basketId === null){
+        let basketId = localStorage.getItem('basketid-mobile');
+        if (basketId === null) {
             basketId = Math.floor(Math.random() * 999) + 101;
-            localStorage.setItem("basketid", basketId);
-        } 
-        
+            localStorage.setItem("basketid-mobile", basketId);
+        }
+
         console.log('basketId', basketId);
         const postObj = {
-            "mobileId": id,
-            "quantity": 1,
+            "productId": id,
+            "quantity": Number(qtydata),
             "basketId": basketId
         };
 
@@ -42,6 +46,11 @@ export default function Productpage() {
             .then(async data => {
                 navigate(`/cart`);
             });
+    }
+
+    function handleChange(event) {
+        setQty(event.target.value);
+
     }
 
     return (
@@ -73,6 +82,15 @@ export default function Productpage() {
                 <div className="button-class">
                     <button className="buy-class">Buy</button>
                     <button onClick={cartFn} className="cart-class">Add to cart</button>
+
+                    <select id="qty" className="cart-class" onChange={handleChange} value={qtydata.qty} >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+
+                    </select>
                 </div>
             </div>
 

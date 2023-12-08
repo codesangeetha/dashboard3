@@ -8,11 +8,11 @@ export default function Site() {
 
     React.useEffect(() => {
         fetchData();
-       // const intervalId = setInterval(fetchData, 1000);
+        // const intervalId = setInterval(fetchData, 1000);
     }, [])
 
     function fetchData() {
-        fetch("http://localhost:8080/api/mobiles")
+        fetch("http://localhost:8080/api/products/type/mobile")
             .then(res => res.json())
             .then(data => {
                 console.log('data', data);
@@ -29,7 +29,7 @@ export default function Site() {
         const result = arr.map((item) => {
 
             let tick = "";
-            if (item.budgetPhone == true) {
+            if (item.ratingCount > 5000) {
                 tick = <img className="tickImg-class" src="https://thumbs.dreamstime.com/b/tick-sign-check-mark-vector-symbol-icon-design-beautiful-illustration-isolated-white-background-92237500.jpg" />
             }
 
@@ -41,7 +41,7 @@ export default function Site() {
                     </div>
                     <div className="margin-class">
 
-                        <div onClick={()=>{ gotoProdPage(item.id); }}>
+                        <div onClick={() => { gotoProdPage(item.id); }}>
                             <img className="img-class" src={item.imageUrl} />
                         </div>
                         <div className="name-class">
@@ -73,12 +73,28 @@ export default function Site() {
         return result
     }
 
+
+    function toCartpage() {
+        navigate(`/cart`)
+    }
+    function toCheckoutpage() {
+        navigate(`/checkoutpage`)
+    }
+
+
+
     return (
-        <div className="display-class">
-            {getResult()}
+        <div>
+            <div className="display-class">
+                {getResult()}
+            </div>
 
-
-            
+            <div onClick={toCartpage}>
+                Cart
+            </div>
+            <div onClick={toCheckoutpage}>
+                Checkout
+            </div>
         </div>
     )
 }

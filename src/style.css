@@ -124,8 +124,44 @@
 .marginTop-class {
     margin-top: 15px;
     margin-left: 8px;
+    
 }
 
 .name-class {
     width: 200px;
+    margin-left: 20px;
 }
+.headname-class{
+    margin-left:70px;
+    margin-bottom:15px ;
+    margin-right: 165px;
+}
+.headPrice-class{
+  margin-right: 30px;
+  margin-bottom:15px;
+}
+.headTotal-class{
+    margin-left: 10px;
+}
+.grand-class{
+    margin-left: 300px;
+}
+.checkout-class{
+    margin-top: 15px;
+    margin-left: 400px;
+}
+.checkoutPrice{
+    margin-left: 70px;
+    width: 85px;
+}
+.cross-class{
+    height: 40px;
+
+}
+
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
